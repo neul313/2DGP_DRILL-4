@@ -64,7 +64,7 @@ def jump():
 
         update_canvas()
         frame = (frame + 1) % 6
-        delay(0.2)
+        delay(0.1)
 
 
 def ouch():
