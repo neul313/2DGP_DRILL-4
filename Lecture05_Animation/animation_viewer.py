@@ -6,8 +6,9 @@ open_canvas()
 grass = load_image('grass.png')
 character = load_image('sheet.png')
 
-location2 =[(90,25,120,225,130),(205,45,110,225,150),(310,70,123,225,170),
+location=[(90,25,120,225,130),(205,45,110,225,150),(310,70,123,225,170),
             (440,45,120,225,155),(555,25,116,225,130),(670,25,115,225,130),]
+
 def stay(frame=0):
     x = 400
     clear_canvas()
@@ -43,7 +44,7 @@ def jump(frame=0):
     x = 400
     clear_canvas()
     grass.draw(400, 30)
-    sx, sy, sw, sh, y = location2[frame % len(location2)]
+    sx, sy, sw, sh, y = location[frame % len(location)]
     character.clip_draw(sx, sy, sw, sh, x, y, 200, 200)
     update_canvas()
     delay(0.1)
