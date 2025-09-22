@@ -20,6 +20,17 @@ def stay():
 
 
 def run():
+    frame = 0
+    x = 400
+    while True:
+        clear_canvas()
+        grass.draw(400, 30)
+
+        character.clip_draw(frame * 120 + 10 + 730, 955 - 460, 116, 238, x, 130, 200, 200)
+
+        update_canvas()
+        frame = (frame + 1) % 6
+        delay(0.1)
     pass
 
 
@@ -45,7 +56,9 @@ def ouch():
 
 while True:
     #stay()
-    walk()
+    #walk()
+    run()
+    #jump()
 
 close_canvas()
 
