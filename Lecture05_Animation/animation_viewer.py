@@ -70,11 +70,18 @@ def jump():
 def ouch():
     pass
 
+
+def repeat_animation(func, count=5):
+    for _ in range(count):
+        func()
+        delay(1)
+    pass
+
 while True:
-    #stay()
-    #walk()
-    #run()
-    jump()
+    repeat_animation(stay)
+    repeat_animation(run)
+    repeat_animation(walk)
+    repeat_animation(jump)
 
 close_canvas()
 
