@@ -14,7 +14,7 @@ def stay(frame=0):
     x = 400
     clear_canvas()
     grass.draw(400, 30)
-    character.clip_draw(frame * 120 + 25, 717, 120, 238, x, 130, 200, 200)
+    character.clip_draw(frame * 120 + 25, 717, 120, 238, x, 250, 500, 500)
     update_canvas()
     delay(0.1)
 
@@ -22,7 +22,7 @@ def run(frame=0):
     x = 400
     clear_canvas()
     grass.draw(400, 30)
-    character.clip_draw(frame * 120 + 10 + 730, 495, 116, 238, x, 130, 200, 200)
+    character.clip_draw(frame * 120 + 10 + 730, 495, 116, 238, x, 250, 500, 500)
     update_canvas()
     delay(0.1)
 
@@ -30,7 +30,7 @@ def walk(frame=0):
     x = 400
     clear_canvas()
     grass.draw(400, 30)
-    character.clip_draw(frame * 120 + 25, 495, 120, 238, x, 130, 200, 200)
+    character.clip_draw(frame * 120 + 25, 495, 120, 238, x, 250, 500, 500)
     update_canvas()
     delay(0.1)
 
@@ -39,7 +39,7 @@ def jump(frame=0):
     clear_canvas()
     grass.draw(400, 30)
     sx, sy, sw, sh, y = location[frame % len(location)]
-    character.clip_draw(sx, sy, sw, sh, x, y, 200, 200)
+    character.clip_draw(sx, sy, sw, sh, x, y + 120, 500, 500)
     update_canvas()
     delay(0.1)
 
